@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "games",
+    "label": {
+      "pt": "Jogos",
+      "en": "Games"
+    },
+    "description": {
+      "pt": "Jogos, protótipos e sistemas de gameplay.",
+      "en": "Games, prototypes and gameplay systems."
+    }
+  },
+  {
+    "slug": "programming",
+    "label": {
+      "pt": "Programação",
+      "en": "Programming"
+    },
+    "description": {
+      "pt": "Engines, ferramentas, gráficos e sistemas de software.",
+      "en": "Engines, tools, graphics and software systems."
+    }
+  },
+  {
+    "slug": "music",
+    "label": {
+      "pt": "Música",
+      "en": "Music"
+    },
+    "description": {
+      "pt": "Composição, trilhas sonoras e design de som para jogos.",
+      "en": "Composition, soundtracks and sound design for games."
+    }
+  },
+  {
+    "slug": "3d-modeling",
+    "label": {
+      "pt": "Modelagem 3D",
+      "en": "3D Modeling"
+    },
+    "description": {
+      "pt": "Modelagem, texturização e criação de assets 3D.",
+      "en": "Modeling, texturing and 3D asset creation."
+    }
+  }
+]

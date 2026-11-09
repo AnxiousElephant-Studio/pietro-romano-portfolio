@@ -1,0 +1,44 @@
+{
+  "owner": {
+    "name": "Pietro",
+    "fullName": "Pietro Romano",
+    "email": "pietro.romano.tech@gmail.com",
+    "photo": {
+      "src": "/images/me/profile.jpg",
+      "width": 705,
+      "height": 878
+    },
+    "emailIcon": "/icons/social/mail.svg"
+  },
+  "studio": {
+    "name": "AnxiousElephant Studio",
+    "url": "https://github.com/AnxiousElephant-Studio",
+    "email": "anxiouselephant.studio@gmail.com",
+    "logo": "/images/logos/anxious-elephant-256.png",
+    "logoLarge": "/images/logos/anxious-elephant-512.png",
+    "emailIcon": "/icons/social/mail.svg"
+  },
+  "socialLinks": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/AnxiousElephant-Studio",
+      "handle": "AnxiousElephant-Studio",
+      "icon": "/icons/social/github.svg"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/pietro-romano-2761aa18b/",
+      "handle": "Pietro Romano",
+      "icon": "/icons/social/linkedin.svg"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/delucaguitar/",
+      "handle": "@delucaguitar",
+      "icon": "/icons/social/instagram.svg"
+    }
+  ]
+}

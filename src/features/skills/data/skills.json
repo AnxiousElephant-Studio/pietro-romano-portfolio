@@ -1,0 +1,554 @@
+{
+  "title": {
+    "pt": "Conhecimentos",
+    "en": "Skills"
+  },
+  "lead": {
+    "pt": "Nível em cada tecnologia, de 0 a 10, com foco em desenvolvimento de jogos.",
+    "en": "Proficiency in each technology, from 0 to 10, with a focus on game development."
+  },
+  "carousel": {
+    "previous": { "pt": "Anterior", "en": "Previous" },
+    "next": { "pt": "Próximo", "en": "Next" }
+  },
+  "groups": [
+    {
+      "id": "engines",
+      "label": {
+        "pt": "Engines e frameworks",
+        "en": "Engines and frameworks"
+      },
+      "skills": [
+        {
+          "name": "Unreal Engine",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Unity",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Godot",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "SDL3",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Dear ImGui",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "GLFW",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "EnTT",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Assimp",
+          "level": 10,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "languages",
+      "label": {
+        "pt": "Linguagens",
+        "en": "Languages"
+      },
+      "skills": [
+        {
+          "name": "C",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "C++",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "C#",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Lua",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "TypeScript / JavaScript",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "GLSL · HLSL · SPIR-V",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Blueprints",
+          "level": 0,
+          "visible": false
+        }
+      ]
+    },
+    {
+      "id": "graphics",
+      "label": {
+        "pt": "Gráficos",
+        "en": "Graphics"
+      },
+      "skills": [
+        {
+          "name": "OpenGL",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Vulkan",
+          "level": 6,
+          "visible": true
+        },
+        {
+          "name": "DirectX",
+          "level": 6,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Programação de shaders",
+            "en": "Shader programming"
+          },
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Renderização em tempo real",
+            "en": "Real-time rendering"
+          },
+          "level": 8,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "label": {
+        "pt": "Física",
+        "en": "Physics"
+      },
+      "skills": [
+        {
+          "name": {
+            "pt": "Simulação física",
+            "en": "Physics simulation"
+          },
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Jolt Physics",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "PhysX",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Box2D",
+          "level": 8,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "engine-architecture",
+      "label": {
+        "pt": "Arquitetura de engine",
+        "en": "Engine architecture"
+      },
+      "skills": [
+        {
+          "name": {
+            "pt": "Arquitetura de engine",
+            "en": "Engine architecture"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "ECS",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Profiling e otimização",
+            "en": "Profiling and optimization"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Ferramentas e pipelines",
+            "en": "Tools and pipelines"
+          },
+          "level": 10,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "dev-tools",
+      "label": {
+        "pt": "Ferramentas de desenvolvimento",
+        "en": "Development tools"
+      },
+      "skills": [
+        {
+          "name": "Git / Git LFS",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Perforce",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "CMake",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Premake",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "xmake",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "RenderDoc",
+          "level": 8,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "game-audio",
+      "label": {
+        "pt": "Áudio de jogos",
+        "en": "Game audio"
+      },
+      "skills": [
+        {
+          "name": {
+            "pt": "Áudio para jogos",
+            "en": "Game audio programming"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "FMOD",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Wwise",
+          "level": 8,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "online",
+      "label": {
+        "pt": "Online e plataformas",
+        "en": "Online and platforms"
+      },
+      "skills": [
+        {
+          "name": "Steamworks",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Epic Online Services",
+          "level": 8,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "label": {
+        "pt": "Música",
+        "en": "Music"
+      },
+      "skills": [
+        {
+          "name": {
+            "pt": "Guitarra",
+            "en": "Electric guitar"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Violão",
+            "en": "Acoustic guitar"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Composição",
+            "en": "Composition"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Trilha sonora para jogos",
+            "en": "Game soundtracks"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Mixagem",
+            "en": "Mixing"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Sound design",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Ensino de música",
+            "en": "Music teaching"
+          },
+          "level": 10,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "music-production",
+      "label": {
+        "pt": "Produção musical",
+        "en": "Music production"
+      },
+      "skills": [
+        {
+          "name": "Ableton Live",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Pro Tools",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Reaper",
+          "level": 6,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "3d-art",
+      "label": {
+        "pt": "Arte 3D",
+        "en": "3D art"
+      },
+      "skills": [
+        {
+          "name": {
+            "pt": "Modelagem",
+            "en": "Modeling"
+          },
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Texturização",
+            "en": "Texturing"
+          },
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Rigging e animação",
+            "en": "Rigging and animation"
+          },
+          "level": 6,
+          "visible": true
+        },
+        {
+          "name": "Blender",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Maya",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "ZBrush",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Substance Painter",
+          "level": 6,
+          "visible": true
+        },
+        {
+          "name": "Aseprite",
+          "level": 6,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "label": {
+        "pt": "Back-end e arquitetura",
+        "en": "Back end and architecture"
+      },
+      "skills": [
+        {
+          "name": ".NET",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Microsserviços",
+            "en": "Microservices"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Sistemas distribuídos",
+            "en": "Distributed systems"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "SQL / NoSQL",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Cloud (Azure / AWS)",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": "Docker / CI-CD",
+          "level": 10,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "label": {
+        "pt": "Inteligência artificial",
+        "en": "Artificial intelligence"
+      },
+      "skills": [
+        {
+          "name": "RAG",
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Embeddings e bancos vetoriais",
+            "en": "Embeddings and vector databases"
+          },
+          "level": 10,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "LLMs e integração de APIs",
+            "en": "LLMs and API integration"
+          },
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "Agentes e tool calling",
+            "en": "Agents and tool calling"
+          },
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Prompt engineering",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Fine-tuning",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": "Machine learning",
+          "level": 8,
+          "visible": true
+        },
+        {
+          "name": {
+            "pt": "IA para jogos (behavior trees, pathfinding)",
+            "en": "Game AI (behavior trees, pathfinding)"
+          },
+          "level": 10,
+          "visible": true
+        }
+      ]
+    }
+  ]
+}

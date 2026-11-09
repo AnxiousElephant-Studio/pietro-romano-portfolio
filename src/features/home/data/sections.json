@@ -1,0 +1,22 @@
+{
+  "pt": {
+    "navigatorLabel": "Seções da página",
+    "scrollHint": "Rolar para baixo",
+    "sections": {
+      "hero": "Início",
+      "featured": "Destaques",
+      "skills": "Conhecimentos",
+      "areas": "Áreas"
+    }
+  },
+  "en": {
+    "navigatorLabel": "Page sections",
+    "scrollHint": "Scroll down",
+    "sections": {
+      "hero": "Start",
+      "featured": "Featured",
+      "skills": "Skills",
+      "areas": "Areas"
+    }
+  }
+}

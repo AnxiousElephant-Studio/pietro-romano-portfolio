@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "byteforge",
+    "title": {
+      "pt": "ByteForge Engine",
+      "en": "ByteForge Engine"
+    },
+    "summary": {
+      "pt": "Minha engine de jogos em C++, com editor próprio, scripting em Lua e renderização em tempo real.",
+      "en": "My C++ game engine, with its own editor, Lua scripting and real-time rendering."
+    },
+    "categories": [
+      "programming",
+      "games"
+    ],
+    "year": "2025",
+    "cover": "https://placehold.co/1200x675/1a1a24/e8e6f0/png?text=ByteForge",
+    "featured": true,
+    "publishedByStudio": true,
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/AnxiousElephant-Studio/byte-forge",
+        "icon": "/icons/social/github.svg"
+      }
+    ],
+    "technologies": [
+      "C++",
+      "Lua",
+      "SDL3",
+      "Dear ImGui",
+      "Assimp",
+      "GLSL",
+      "OpenGL",
+      "ECS"
+    ],
+    "details": {
+      "about": {
+        "pt": "A ByteForge é a minha engine de jogos, escrita em C++. Ela reúne renderização, um sistema de entidades, scripting em Lua e um editor próprio, pensados para criar jogos de forma rápida e organizada.",
+        "en": "ByteForge is my game engine, written in C++. It brings together rendering, an entity system, Lua scripting and its own editor, designed to make building games fast and well organized."
+      },
+      "role": {
+        "pt": "Cuido da engine de ponta a ponta: da arquitetura e da renderização às ferramentas do editor.",
+        "en": "I handle the engine end to end, from architecture and rendering to the editor tools."
+      },
+      "challenges": {
+        "pt": "Manter tudo rápido e simples de usar ao mesmo tempo, equilibrando desempenho, organização do código e um fluxo de trabalho agradável.",
+        "en": "Keeping everything fast and easy to use at the same time, balancing performance, code organization and a pleasant workflow."
+      }
+    }
+  }
+]

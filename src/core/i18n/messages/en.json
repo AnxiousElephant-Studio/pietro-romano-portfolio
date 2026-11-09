@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "{ownerName} · Games, Music & Code",
+    "description": "Pietro Romano, software engineer and game developer. Engines, games, soundtracks and sound effects.",
+    "role": "Software engineer · Game developer · Musician"
+  },
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About & Contact",
+    "resume": "Resume",
+    "language": "Language"
+  },
+  "home": {
+    "eyebrow": "Welcome to my creative universe!",
+    "openToWork": "Open to opportunities",
+    "titleStart": "Where ",
+    "titleAccent": "music",
+    "titleEnd": " and technology meet.",
+    "lead": "I create games, engines, assets, music and sound effects.",
+    "primaryAction": "See projects",
+    "secondaryAction": "Get in touch",
+    "resumeAction": "Resume",
+    "featuredTitle": "Featured",
+    "allProjectsLink": "All projects →",
+    "areasTitle": "Areas",
+    "projectCountOne": "1 project",
+    "projectCountOther": "{count} projects",
+    "comingSoonLabel": "Coming soon",
+    "comingSoonTitle": "To be announced",
+    "comingSoonText": "A new project is being forged."
+  },
+  "projects": {
+    "title": "Projects",
+    "lead": "A selection of work in game development, programming, music and 3D art.",
+    "allCategories": "All",
+    "categoryTitle": "{category} projects",
+    "backLink": "← Back to projects",
+    "aboutHeading": "About the project",
+    "roleHeading": "My role",
+    "challengesHeading": "Challenges and lessons",
+    "technologiesHeading": "Technologies",
+    "publishedByHeading": "Published by",
+    "galleryImageLabel": "Image {number}",
+    "emptyTitle": "Nothing here yet",
+    "emptyText": "Projects in this area are on their way."
+  },
+  "about": {
+    "title": "About & Contact",
+    "eyebrow": "About me",
+    "heading": "Hi, I'm {ownerName}.",
+    "introduction": "I'm a software engineer and game developer. I like building things from the ground up: engines, tools and the systems that make a game work.",
+    "paragraphs": [
+      "Throughout my career I've worked on everything from embedded systems to large-scale platforms, always paying close attention to architecture and to the quality of what ships. Today I'm building my own engine, ByteForge, and I also work with Unreal, Unity and Godot.",
+      "I know the particulars of real-time applications well, where performance, memory and every millisecond of a frame matter, and I enjoy solving those problems end to end.",
+      "Music has been part of my life since I was 3, and I've been teaching since I was 12. Today it's also part of my game work, through soundtracks and sound effects.",
+      "Joining the game industry is a dream of mine, and I'm actively looking for that opportunity, in Brazil or abroad. If you're building a team, I'd love to talk."
+    ],
+    "studioLabel": "My studio",
+    "studioDescription": "My independent studio, where I develop and publish games and tools.",
+    "contactHeading": "Contact",
+    "emailLabel": "Email",
+    "studioEmailLabel": "Studio email"
+  },
+  "resume": {
+    "printAction": "Print / Save as PDF"
+  },
+  "footer": {
+    "publishedUnder": "Projects published under"
+  },
+  "notFound": {
+    "title": "Page not found.",
+    "backLink": "Back to home"
+  }
+}

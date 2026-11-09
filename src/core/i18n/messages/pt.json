@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "{ownerName} · Jogos, Música e Código",
+    "description": "Pietro Romano, engenheiro de software e desenvolvedor de jogos. Engines, jogos, trilhas e efeitos sonoros.",
+    "role": "Engenheiro de software · Desenvolvedor de jogos · Músico"
+  },
+  "navigation": {
+    "home": "Início",
+    "projects": "Projetos",
+    "about": "Sobre & Contato",
+    "resume": "Currículo",
+    "language": "Idioma"
+  },
+  "home": {
+    "eyebrow": "Bem-vindo ao meu universo criativo!",
+    "openToWork": "Aberto a oportunidades",
+    "titleStart": "Onde a ",
+    "titleAccent": "música ",
+    "titleEnd": "e a tecnologia se encontram.",
+    "lead": "Eu crio jogos, engines, assets, músicas e efeitos sonoros.",
+    "primaryAction": "Ver projetos",
+    "secondaryAction": "Fale comigo",
+    "resumeAction": "Currículo",
+    "featuredTitle": "Destaques",
+    "allProjectsLink": "Todos os projetos →",
+    "areasTitle": "Áreas",
+    "projectCountOne": "1 projeto",
+    "projectCountOther": "{count} projetos",
+    "comingSoonLabel": "Em breve",
+    "comingSoonTitle": "A ser anunciado",
+    "comingSoonText": "Um novo projeto está sendo forjado."
+  },
+  "projects": {
+    "title": "Projetos",
+    "lead": "Uma seleção de trabalhos em desenvolvimento de jogos, programação, música e arte 3D.",
+    "allCategories": "Todos",
+    "categoryTitle": "Projetos de {category}",
+    "backLink": "← Voltar para projetos",
+    "aboutHeading": "Sobre o projeto",
+    "roleHeading": "Meu papel",
+    "challengesHeading": "Desafios e aprendizados",
+    "technologiesHeading": "Tecnologias",
+    "publishedByHeading": "Publicado por",
+    "galleryImageLabel": "Imagem {number}",
+    "emptyTitle": "Ainda nada por aqui",
+    "emptyText": "Os projetos desta área estão a caminho."
+  },
+  "about": {
+    "title": "Sobre & Contato",
+    "eyebrow": "Sobre mim",
+    "heading": "Olá, eu sou {ownerName}.",
+    "introduction": "Sou engenheiro de software e desenvolvedor de jogos. Gosto de construir as coisas desde a base: engines, ferramentas e os sistemas que fazem um jogo funcionar.",
+    "paragraphs": [
+      "Ao longo da carreira, trabalhei de sistemas embarcados a plataformas de grande escala, sempre com atenção à arquitetura e à qualidade do que é entregue. Hoje desenvolvo minha própria engine, a ByteForge, e também trabalho com Unreal, Unity e Godot.",
+      "Conheço bem as particularidades de aplicações em tempo real, em que desempenho, memória e cada milissegundo de um frame fazem diferença, e gosto de resolver esses problemas de ponta a ponta.",
+      "A música me acompanha desde os 3 anos, e dou aulas desde os 12. Hoje ela também faz parte do meu trabalho com jogos, nas trilhas e nos efeitos sonoros.",
+      "Entrar para a indústria de games é um sonho, e estou buscando ativamente essa oportunidade, no Brasil ou fora. Se você está montando um time, vou gostar de conversar."
+    ],
+    "studioLabel": "Meu estúdio",
+    "studioDescription": "Meu estúdio independente, onde desenvolvo e publico jogos e ferramentas.",
+    "contactHeading": "Contato",
+    "emailLabel": "E-mail",
+    "studioEmailLabel": "E-mail do estúdio"
+  },
+  "resume": {
+    "printAction": "Imprimir / Salvar PDF"
+  },
+  "footer": {
+    "publishedUnder": "Projetos publicados sob"
+  },
+  "notFound": {
+    "title": "Página não encontrada.",
+    "backLink": "Voltar ao início"
+  }
+}

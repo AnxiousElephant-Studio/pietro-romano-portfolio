@@ -1,0 +1,260 @@
+{
+  "pt": {
+    "headline": "Engenheiro de Software · Desenvolvedor de Jogos · Músico",
+    "location": "Mogi das Cruzes, São Paulo, Brasil",
+    "headings": {
+      "contact": "Contato",
+      "summary": "Resumo profissional",
+      "experience": "Experiência profissional",
+      "education": "Formação acadêmica",
+      "skills": "Competências",
+      "certifications": "Certificações"
+    },
+    "summary": [
+      "Engenheiro de software com atuação em arquitetura, análise e desenvolvimento de jogos, sistemas e aplicações, de sistemas embarcados a ambientes corporativos de larga escala. Experiência no desenvolvimento de motores gráficos próprios e domínio de engines consolidadas como Unreal Engine, Unity e Godot, com foco em arquitetura de software, otimização e escalabilidade.",
+      "Especialista em C, C++ e C#, com conhecimento avançado em renderização em tempo real, programação gráfica, gerenciamento de memória e engenharia de baixo nível, além do desenvolvimento de ferramentas e pipelines de apoio a equipes de produção.",
+      "Músico desde os 3 anos e professor desde os 12, trajetória que consolidou habilidades de comunicação, colaboração e liderança. Aberto a oportunidades nacionais e internacionais em desenvolvimento de jogos, engenharia e arquitetura de software."
+    ],
+    "experience": [
+      {
+        "company": "Ergondata",
+        "role": "Staff Engineer",
+        "period": "mar. 2026 – atual",
+        "location": "São Paulo, Brasil",
+        "highlights": []
+      },
+      {
+        "company": "act digital · BTG Pactual",
+        "role": "Desenvolvedor de Software Sênior",
+        "period": "ago. 2025 – fev. 2026",
+        "location": "São Paulo, Brasil",
+        "highlights": []
+      },
+      {
+        "company": "Drixx",
+        "role": "Arquiteto de Soluções",
+        "period": "nov. 2022 – fev. 2026",
+        "location": "Mogi das Cruzes, Brasil",
+        "highlights": [
+          "Arquitetura de sistemas de saúde de larga escala, liderando o desenvolvimento e a integração de plataformas.",
+          "Responsável por escalabilidade, segurança e conformidade com normas regulatórias do setor.",
+          "Atuação junto a equipes multidisciplinares na entrega de soluções que otimizaram fluxos de trabalho e a eficiência operacional dos clientes."
+        ]
+      },
+      {
+        "company": "Vivo (Telefônica Brasil)",
+        "role": "Consultor de Arquitetura",
+        "period": "set. 2023 – nov. 2024",
+        "location": "São Paulo, Brasil",
+        "highlights": [
+          "Arquitetura de produto interno de inteligência artificial com ênfase em RAG, embeddings, microsserviços e sistemas distribuídos.",
+          "Idealização e desenvolvimento das aplicações com .NET, Python e Next.js, priorizando desempenho e escalabilidade."
+        ]
+      },
+      {
+        "company": "Ergondata",
+        "role": "Arquiteto de Software · Desenvolvedor de Software",
+        "period": "set. 2021 – nov. 2022",
+        "location": "São Paulo, Brasil",
+        "highlights": [
+          "Arquitetura e desenvolvimento de marketplace de cargas e conta digital.",
+          ".NET Core (microsserviços, APIs, MVC), SQL Server, MongoDB, RabbitMQ, IdentityServer4, Elasticsearch e Kibana, React e Next.js."
+        ]
+      },
+      {
+        "company": "Muralis Tecnologia",
+        "role": "Analista de Desenvolvimento",
+        "period": "fev. 2021 – ago. 2021",
+        "location": "Mogi das Cruzes, Brasil",
+        "highlights": [
+          "Desenvolvimento full stack com ArcGIS, React, Redux, GraphQL, .NET (Windows Forms e WPF), Java, Kotlin e Oracle Database."
+        ]
+      },
+      {
+        "company": "ACAI Soluções em TI",
+        "role": "Desenvolvedor de Software",
+        "period": "mar. 2020 – fev. 2021",
+        "location": "Poá, Brasil",
+        "highlights": [
+          "Desenvolvimento full stack com .NET (APIs RESTful em ASP.NET Core), JavaScript, Azure, MySQL e MongoDB."
+        ]
+      },
+      {
+        "company": "Autônomo",
+        "role": "Desenvolvedor de Software",
+        "period": "abr. 2015 – set. 2023",
+        "location": "São Paulo, Brasil",
+        "highlights": [
+          "Definição e modernização de arquiteturas de sistemas para pequenas e médias empresas.",
+          "Desenvolvimento de funcionalidades, ferramentas personalizadas e de um sistema acadêmico completo.",
+          "CI/CD, DevOps e DevSecOps, manutenção e sustentação de sistemas, e desenvolvimento de jogos."
+        ]
+      },
+      {
+        "company": "Escola de Música Pedro Romano",
+        "role": "Professor de Música",
+        "period": "jan. 2009 – atual",
+        "location": "São Paulo, Brasil",
+        "highlights": [
+          "Ensino individual e em grupo (prática de banda) para alunos de todas as idades e níveis, do iniciante ao avançado.",
+          "Metodologia personalizada para estilos clássico, popular, jazz e rock, com foco nos objetivos de cada aluno."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Impacta Tecnologia",
+        "degree": "MBA em Arquitetura de Soluções Digitais",
+        "period": "2023 – 2024"
+      },
+      {
+        "institution": "Universidade de Mogi das Cruzes",
+        "degree": "Bacharelado em Sistemas de Informação",
+        "period": "2017 – 2020"
+      }
+    ],
+    "skillGroups": [
+      { "name": "Engines", "items": ["Unreal Engine", "Unity", "Godot", "Engine própria (ByteForge)"] },
+      { "name": "Linguagens", "items": ["C", "C++", "C#", "TypeScript", "Java"] },
+      { "name": "Gráficos e sistemas", "items": ["Renderização em tempo real", "Programação gráfica", "Gerenciamento de memória", "Ferramentas e pipelines"] },
+      { "name": "Arquitetura e back-end", "items": [".NET", "Microsserviços", "Sistemas distribuídos", "RAG e embeddings", "SQL e NoSQL"] },
+      { "name": "Música", "items": ["Performance", "Composição", "Trilha sonora para jogos", "Ensino"] }
+    ],
+    "certifications": [
+      "REST com ASP.NET Core WebAPI",
+      "Dominando os Testes de Software",
+      "Introdução ao DevOps",
+      "Desenvolvimento de Jogos",
+      "Iniciando com ASP.NET Core"
+    ]
+  },
+  "en": {
+    "headline": "Software Engineer · Game Developer · Musician",
+    "location": "Mogi das Cruzes, São Paulo, Brazil",
+    "headings": {
+      "contact": "Contact",
+      "summary": "Professional summary",
+      "experience": "Professional experience",
+      "education": "Education",
+      "skills": "Skills",
+      "certifications": "Certifications"
+    },
+    "summary": [
+      "Software engineer working across architecture, analysis and development of games, systems and applications, from embedded systems to large-scale enterprise environments. Experienced in building proprietary graphics engines and proficient in established engines such as Unreal Engine, Unity and Godot, with a focus on software architecture, optimization and scalability.",
+      "Specialist in C, C++ and C#, with advanced knowledge of real-time rendering, graphics programming, memory management and low-level engineering, as well as building tools and pipelines that support production teams.",
+      "Musician since age 3 and music teacher since age 12, a background that strengthened communication, collaboration and leadership skills. Open to opportunities in Brazil and abroad in game development, software engineering and architecture."
+    ],
+    "experience": [
+      {
+        "company": "Ergondata",
+        "role": "Staff Engineer",
+        "period": "Mar 2026 – Present",
+        "location": "São Paulo, Brazil",
+        "highlights": []
+      },
+      {
+        "company": "act digital · BTG Pactual",
+        "role": "Senior Software Developer",
+        "period": "Aug 2025 – Feb 2026",
+        "location": "São Paulo, Brazil",
+        "highlights": []
+      },
+      {
+        "company": "Drixx",
+        "role": "Solutions Architect",
+        "period": "Nov 2022 – Feb 2026",
+        "location": "Mogi das Cruzes, Brazil",
+        "highlights": [
+          "Architected large-scale healthcare systems, leading the development and integration of core platforms.",
+          "Owned scalability, security and compliance with healthcare regulatory standards.",
+          "Partnered with multidisciplinary teams to deliver solutions that streamlined workflows and improved clients' operational efficiency."
+        ]
+      },
+      {
+        "company": "Vivo (Telefônica Brasil)",
+        "role": "Architecture Consultant",
+        "period": "Sep 2023 – Nov 2024",
+        "location": "São Paulo, Brazil",
+        "highlights": [
+          "Architected an internal artificial intelligence product focused on RAG, embeddings, microservices and distributed systems.",
+          "Designed and built the applications with .NET, Python and Next.js, prioritizing performance and scalability."
+        ]
+      },
+      {
+        "company": "Ergondata",
+        "role": "Software Architect · Software Developer",
+        "period": "Sep 2021 – Nov 2022",
+        "location": "São Paulo, Brazil",
+        "highlights": [
+          "Architecture and development of a freight marketplace and digital banking account.",
+          ".NET Core (microservices, APIs, MVC), SQL Server, MongoDB, RabbitMQ, IdentityServer4, Elasticsearch and Kibana, React and Next.js."
+        ]
+      },
+      {
+        "company": "Muralis Tecnologia",
+        "role": "Development Analyst",
+        "period": "Feb 2021 – Aug 2021",
+        "location": "Mogi das Cruzes, Brazil",
+        "highlights": [
+          "Full stack development with ArcGIS, React, Redux, GraphQL, .NET (Windows Forms and WPF), Java, Kotlin and Oracle Database."
+        ]
+      },
+      {
+        "company": "ACAI Soluções em TI",
+        "role": "Software Developer",
+        "period": "Mar 2020 – Feb 2021",
+        "location": "Poá, Brazil",
+        "highlights": [
+          "Full stack development with .NET (RESTful APIs in ASP.NET Core), JavaScript, Azure, MySQL and MongoDB."
+        ]
+      },
+      {
+        "company": "Self-employed",
+        "role": "Software Developer",
+        "period": "Apr 2015 – Sep 2023",
+        "location": "São Paulo, Brazil",
+        "highlights": [
+          "Defined and modernized system architectures for small and medium-sized businesses.",
+          "Built features, custom tools and a complete academic management system.",
+          "CI/CD, DevOps and DevSecOps, system maintenance and support, and game development."
+        ]
+      },
+      {
+        "company": "Pedro Romano Music School",
+        "role": "Music Teacher",
+        "period": "Jan 2009 – Present",
+        "location": "São Paulo, Brazil",
+        "highlights": [
+          "Private and group lessons (band practice) for students of all ages and levels, from beginner to advanced.",
+          "Tailored teaching across classical, popular, jazz and rock styles, focused on each student's goals."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Impacta Tecnologia",
+        "degree": "MBA in Digital Solutions Architecture",
+        "period": "2023 – 2024"
+      },
+      {
+        "institution": "University of Mogi das Cruzes",
+        "degree": "Bachelor's degree in Information Systems",
+        "period": "2017 – 2020"
+      }
+    ],
+    "skillGroups": [
+      { "name": "Engines", "items": ["Unreal Engine", "Unity", "Godot", "Proprietary engine (ByteForge)"] },
+      { "name": "Languages", "items": ["C", "C++", "C#", "TypeScript", "Java"] },
+      { "name": "Graphics and systems", "items": ["Real-time rendering", "Graphics programming", "Memory management", "Tools and pipelines"] },
+      { "name": "Architecture and back end", "items": [".NET", "Microservices", "Distributed systems", "RAG and embeddings", "SQL and NoSQL"] },
+      { "name": "Music", "items": ["Performance", "Composition", "Game soundtracks", "Teaching"] }
+    ],
+    "certifications": [
+      "REST with ASP.NET Core WebAPI",
+      "Mastering Software Testing",
+      "Introduction to DevOps",
+      "Game Development",
+      "Getting Started with ASP.NET Core"
+    ]
+  }
+}
