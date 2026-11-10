@@ -270,6 +270,8 @@ html { scroll-padding-top: 72px; }
 .skill-bar-fill { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #c4501f, var(--accent)); transition: width 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s; }
 .is-visible .skill-bar-fill { width: var(--skill-fill); }
 
+#skills { overflow-x: hidden }
+
 @media (max-width: 1240px) {
   .section-navigator { right: 10px; }
   .section-dot-label { display: none; }
