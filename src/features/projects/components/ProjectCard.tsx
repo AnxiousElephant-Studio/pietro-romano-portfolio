@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Locale, localizedPath } from "@/core/i18n/config";
-import { getCategoryLabel, PROJECT_COVER_SIZE } from "../projects";
+import { getCategoryLabel } from "../projects";
 import type { Project } from "../types";
 
 type ProjectCardProps = { project: Project; locale: Locale };
@@ -15,7 +15,7 @@ export default function ProjectCard({ project, locale }: ProjectCardProps) {
   return (
     <Link href={localizedPath(locale, `/projects/${project.slug}`)} className="card">
       <div className="card-media">
-        <Image src={project.cover} alt="" width={PROJECT_COVER_SIZE.width} height={PROJECT_COVER_SIZE.height} />
+        <Image src={project.cover.src} alt="" width={project.cover.width} height={project.cover.height} />
       </div>
       <div className="card-body">
         <div className="card-meta">

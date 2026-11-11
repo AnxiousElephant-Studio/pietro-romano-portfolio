@@ -6,15 +6,19 @@
       "en": "ByteForge Engine"
     },
     "summary": {
-      "pt": "Minha engine de jogos em C++, com editor próprio, scripting em Lua e renderização em tempo real.",
-      "en": "My C++ game engine, with its own editor, Lua scripting and real-time rendering."
+      "pt": "Uma engine para aplicações em tempo real.",
+      "en": "An engine for real-time applications."
     },
     "categories": [
       "programming",
       "games"
     ],
     "year": "2025",
-    "cover": "https://placehold.co/1200x675/1a1a24/e8e6f0/png?text=ByteForge",
+    "cover": {
+      "src": "/images/projects/byteforge/cover.webp",
+      "width": 1600,
+      "height": 1000
+    },
     "featured": true,
     "publishedByStudio": true,
     "links": [
@@ -26,27 +30,366 @@
     ],
     "technologies": [
       "C++",
-      "Lua",
-      "SDL3",
-      "Dear ImGui",
-      "Assimp",
-      "GLSL",
       "OpenGL",
+      "SDL3",
+      "ImGui",
+      "Lua",
       "ECS"
     ],
     "details": {
       "about": {
-        "pt": "A ByteForge é a minha engine de jogos, escrita em C++. Ela reúne renderização, um sistema de entidades, scripting em Lua e um editor próprio, pensados para criar jogos de forma rápida e organizada.",
-        "en": "ByteForge is my game engine, written in C++. It brings together rendering, an entity system, Lua scripting and its own editor, designed to make building games fast and well organized."
+        "pt": "A ByteForge é resultado daqueles projetos que, se você contar para alguém, vão achar que ou você é doido ou não tem muito o que fazer.\n\nApesar de amar desenvolver jogos, usar as ferramentas do mercado e me aventurar por esse universo gigantesco, sempre tive a curiosidade de entender como essas ferramentas funcionam por debaixo dos panos. Algumas perguntas não saíam da minha cabeça:\n\n- O que é preciso para construir uma ferramenta dessas?\n- Será que é muito complexo?\n- Não deve ser tão difícil assim desenhar um triângulo na tela, né?\n\nPois é, meus amigos, descobri da pior maneira possível. Mas sou muito grato e feliz com o resultado: apesar de simples, e de não chegar a 1% das ferramentas do mercado, hoje me sinto muito mais confiante para falar de jogos, trabalhar com eles e contribuir em todas as frentes que a criação de um jogo exige.\n\nA engine é dividida em módulos independentes, pensados para:\n\n- ter, cada um, uma responsabilidade clara;\n- manter as bibliotecas de terceiros escondidas dentro de quem as usa;\n- evoluir ou ser trocados sem quebrar o resto.\n\nA seguir, um pouquinho de cada módulo, por que ele é importante e o que aprendi com ele.",
+        "en": "ByteForge is the result of one of those projects that, if you tell someone about it, they'll think you're either crazy or have too much free time.\n\nAs much as I love making games, using the tools on the market and exploring this huge universe, I was always curious about how those tools work under the hood. A few questions wouldn't leave my head:\n\n- What does it take to build a tool like that?\n- Is it really that complex?\n- Drawing a triangle on the screen can't be that hard, right?\n\nWell, my friends, I found out the hard way. But I'm very grateful and happy with the result: even though it's simple and not even 1% of what the tools on the market offer, today I feel much more confident talking about games, working with them and contributing to every area that making a game requires.\n\nThe engine is split into independent modules, designed to:\n\n- each have a single, clear responsibility;\n- keep third-party libraries hidden inside the modules that use them;\n- evolve or be replaced without breaking the rest.\n\nBelow is a little about each module, why it matters and what I learned from it."
       },
-      "role": {
-        "pt": "Cuido da engine de ponta a ponta: da arquitetura e da renderização às ferramentas do editor.",
-        "en": "I handle the engine end to end, from architecture and rendering to the editor tools."
-      },
+      "modules": [
+        {
+          "name": {
+            "pt": "ECS",
+            "en": "ECS"
+          },
+          "description": {
+            "pt": "O coração da engine. Já é super adotado pelas ferramentas do mercado, mas ainda é bem obscuro para quem só usa e não entende o que realmente acontece por baixo.",
+            "en": "The heart of the engine. It's widely adopted by the tools on the market, but still pretty obscure for those who just use it without understanding what really happens underneath."
+          },
+          "parts": [
+            {
+              "name": {
+                "pt": "Entidade",
+                "en": "Entity"
+              },
+              "description": {
+                "pt": "Qualquer objeto ou ator, visível ou oculto, simples ou complexo, é tratado como uma entidade, que na realidade é só um nome mais elegante para um id único.",
+                "en": "Any object or actor, visible or hidden, simple or complex, is treated as an entity, which is really just a fancier name for a unique id."
+              }
+            },
+            {
+              "name": {
+                "pt": "Tipos de componente",
+                "en": "Component types"
+              },
+              "description": {
+                "pt": "São a identificação e a estrutura dos dados que formam um componente, ou seja, a definição de cada comportamento possível dentro da ferramenta. Alguns exemplos:\n\n- Transform: guarda apenas posição, rotação e escala.\n- Sprite: aponta para a textura e para um material, que pode ter shaders customizados.\n- Fonte de áudio: guarda a faixa, o volume e se deve tocar ao iniciar ou ficar em loop.\n\nMas não é tão simples assim. Na minha abordagem, cada tipo de componente guarda os dados de todas as entidades em um único vetor contínuo, junto com um dicionário que tem como chave o id da entidade e, como valor, a posição dos dados dela nesse vetor. Assim os dados ficam juntinhos na memória, o que ajuda muito no desempenho.",
+                "en": "They're the identity and data layout of a component, in other words, the definition of every possible behavior inside the tool. A few examples:\n\n- Transform: holds only position, rotation and scale.\n- Sprite: points to a texture and a material, which can have custom shaders.\n- Audio source: holds the track, the volume and whether it should play on start or loop.\n\nBut it's not that simple. In my approach, each component type stores the data of every entity in a single contiguous array, along with a dictionary whose key is the entity id and whose value is where that entity's data sits in the array. That keeps the data packed together in memory, which helps a lot with performance."
+              }
+            },
+            {
+              "name": {
+                "pt": "Sistemas",
+                "en": "Systems"
+              },
+              "description": {
+                "pt": "São os responsáveis por fazer as coisas acontecerem. Cada sistema conhece apenas as entidades que têm a combinação de tipos de componente que ele exige para fazer o seu trabalho. A renderização de sprites, por exemplo, exige que a entidade tenha um transform e um sprite, para saber onde desenhar e qual textura usar.",
+                "en": "They're what make things happen. Each system only knows the entities that have the combination of component types it needs to do its job. Sprite rendering, for example, requires an entity to have both a transform and a sprite, so it knows where to draw and which texture to use."
+              }
+            },
+            {
+              "name": {
+                "pt": "Registro",
+                "en": "Registry"
+              },
+              "description": {
+                "pt": "Não ganhou uma letra na sigla, mas é realmente o centro de tudo. Como o nome sugere, ele armazena e identifica todas as entidades, componentes e sistemas de uma cena. Cada entidade tem um bitset marcando quais tipos de componente ela possui, e é comparando esse bitset que o registro sabe em quais sistemas ela entra.",
+                "en": "It didn't get a letter in the acronym, but it's really the center of everything. As the name suggests, it stores and keeps track of every entity, component and system in a scene. Each entity has a bitset marking which component types it has, and by comparing that bitset the registry knows which systems it belongs to."
+              }
+            }
+          ]
+        },
+        {
+          "name": {
+            "pt": "Cena",
+            "en": "Scene"
+          },
+          "description": {
+            "pt": "É onde o mundo do jogo vive. A cena junta o ECS com os componentes da engine e roda o modo play, com:\n\n- movimento, colisões, áudio e scripts;\n- pausa, avanço quadro a quadro e controle da velocidade do tempo, que ajudam demais na hora de depurar;\n- hierarquia de pais e filhos, então uma luz presa na bola, por exemplo, acompanha a bola sozinha.",
+            "en": "It's where the game world lives. The scene brings the ECS together with the engine's components and runs play mode, with:\n\n- movement, collisions, audio and scripts;\n- pause, frame-by-frame stepping and time scale control, which help a lot when debugging;\n- a parent and child hierarchy, so a light attached to the ball, for example, follows the ball on its own."
+          }
+        },
+        {
+          "name": {
+            "pt": "Renderização",
+            "en": "Rendering"
+          },
+          "description": {
+            "pt": "Foi aqui que descobri que desenhar um triângulo não era tão simples assim. Hoje a engine desenha sprites, textos e luzes 2D com OpenGL, usando framebuffers e render passes, e a iluminação é acumulada em um mapa de luz que dá vida à cena.",
+            "en": "This is where I found out that drawing a triangle wasn't that simple after all. Today the engine draws sprites, text and 2D lights with OpenGL, using framebuffers and render passes, and lighting is accumulated into a light map that brings the scene to life."
+          }
+        },
+        {
+          "name": {
+            "pt": "Materiais",
+            "en": "Materials"
+          },
+          "description": {
+            "pt": "Inspirado na Unreal: um material é só uma função de superfície em GLSL, e a engine monta o resto do shader, com ou sem iluminação. Os parâmetros aparecem no editor, e o material recarrega na hora em que o arquivo é salvo, sem precisar reiniciar nada.",
+            "en": "Inspired by Unreal: a material is just a surface function in GLSL, and the engine builds the rest of the shader, lit or unlit. Its parameters show up in the editor, and the material reloads the moment the file is saved, with no restart needed."
+          }
+        },
+        {
+          "name": {
+            "pt": "Scripting em Lua",
+            "en": "Lua scripting"
+          },
+          "description": {
+            "pt": "Para criar a lógica do jogo sem recompilar a engine. Cada entidade pode ter seu próprio script, que consegue:\n\n- mexer em posição, velocidade, sprite, câmera e áudio;\n- ler o input e o tempo;\n- buscar outras entidades por nome ou tag;\n- criar e destruir objetos e trocar de level.",
+            "en": "So game logic can be written without recompiling the engine. Each entity can have its own script, which can:\n\n- change position, velocity, sprite, camera and audio;\n- read input and time;\n- find other entities by name or tag;\n- spawn and destroy objects and switch levels."
+          }
+        },
+        {
+          "name": {
+            "pt": "Levels e stamps",
+            "en": "Levels and stamps"
+          },
+          "description": {
+            "pt": "Os levels são salvos em JSON, e os stamps são os meus prefabs: um objeto montado uma vez e reaproveitado quantas vezes for preciso, pelo editor ou por script. Os tijolos do Forge Breakout, por exemplo, são todos criados por script a partir de um único stamp.",
+            "en": "Levels are saved as JSON, and stamps are my prefabs: an object built once and reused as many times as needed, from the editor or from a script. The bricks in Forge Breakout, for example, are all spawned by a script from a single stamp."
+          }
+        },
+        {
+          "name": {
+            "pt": "Física, áudio e tempo",
+            "en": "Physics, audio and time"
+          },
+          "description": {
+            "pt": "Os módulos menores, mas que fazem o jogo funcionar de verdade:\n\n- Física 2D simples para movimento e colisão.\n- Áudio com volume, loop e reprodução ao iniciar.\n- Controle de quadros, que calcula o delta time e limita o FPS.\n- Profiler, que mostra quanto tempo cada parte do frame leva.",
+            "en": "The smaller modules that make the game actually work:\n\n- Simple 2D physics for movement and collision.\n- Audio with volume, looping and play on start.\n- A frame manager that computes delta time and caps the frame rate.\n- A profiler that shows how long each part of the frame takes."
+          }
+        },
+        {
+          "name": {
+            "pt": "Editor",
+            "en": "Editor"
+          },
+          "description": {
+            "pt": "É onde tudo se junta. Feito com ImGui, ele reúne:\n\n- hierarquia de cena com arrastar e soltar;\n- inspetor de objetos e gizmo para mover, rotacionar e escalar;\n- navegador de arquivos e editor de código para Lua e GLSL;\n- console e painéis para observar o ECS e o profiler.\n\nO Play roda o jogo dentro do próprio editor, e o Stop devolve a cena exatamente como estava.",
+            "en": "It's where everything comes together. Built with ImGui, it brings:\n\n- a drag-and-drop scene hierarchy;\n- an object inspector and a move/rotate/scale gizmo;\n- a file browser and a code editor for Lua and GLSL;\n- a console and panels to watch the ECS and the profiler.\n\nPlay runs the game right inside the editor, and Stop puts the scene back exactly as it was."
+          }
+        }
+      ],
+      "sections": [
+        {
+          "heading": {
+            "pt": "Jogo de exemplo: Forge Breakout",
+            "en": "Sample game: Forge Breakout"
+          },
+          "text": {
+            "pt": "Um breakout feito inteiramente dentro da ByteForge para colocar a engine à prova. Ele usa:\n\n- um fundo de forja iluminado;\n- materiais próprios de metal quente e brasa;\n- tijolos criados por um script Lua a partir de um único stamp;\n- luzes presas à raquete e à bola como entidades filhas;\n- um placar feito com labels.",
+            "en": "A breakout game built entirely inside ByteForge to put the engine to the test. It uses:\n\n- a lit forge background;\n- custom hot-metal and ember materials;\n- bricks spawned by a Lua script from a single stamp;\n- lights attached to the paddle and ball as child entities;\n- a score made with labels."
+          }
+        }
+      ],
       "challenges": {
-        "pt": "Manter tudo rápido e simples de usar ao mesmo tempo, equilibrando desempenho, organização do código e um fluxo de trabalho agradável.",
-        "en": "Keeping everything fast and easy to use at the same time, balancing performance, code organization and a pleasant workflow."
+        "pt": "Nada aqui veio de graça. Alguns dos desafios que mais me ensinaram:\n\n- Tela preta no OpenGL: quando algo dá errado, ele simplesmente não desenha nada. Aprendi a depurar o pipeline etapa por etapa, do buffer ao shader.\n- Organização dos dados no ECS: guardar componentes juntos na memória é rápido, mas remover um componente mexe nas posições dos outros, e isso precisa ser tratado com cuidado.\n- Destruir objetos no meio do frame: se um script destrói uma entidade enquanto a cena percorre a lista, tudo quebra. A solução foi adiar a destruição para o fim da etapa.\n- Play e Stop no editor: para o Stop devolver a cena intacta, o editor salva o level antes do Play e o restaura depois, desfazendo tudo o que a física e os scripts mudaram.\n- Manter tudo desacoplado: cada atalho entre módulos parece inofensivo na hora e cobra caro depois.\n\nO maior aprendizado foi entender o porquê das decisões das engines do mercado. Hoje, quando uso uma delas, sei o que está acontecendo por baixo e consigo tirar muito mais proveito dela.",
+        "en": "None of this came for free. Some of the challenges that taught me the most:\n\n- The OpenGL black screen: when something goes wrong, it simply draws nothing. I learned to debug the pipeline step by step, from the buffer to the shader.\n- Data layout in the ECS: keeping components packed together in memory is fast, but removing one shifts the others around, and that has to be handled carefully.\n- Destroying objects mid-frame: if a script destroys an entity while the scene is looping over the list, everything breaks. The fix was to defer destruction to the end of the stage.\n- Play and Stop in the editor: for Stop to bring the scene back intact, the editor saves the level before Play and restores it afterwards, undoing everything physics and scripts changed.\n- Keeping everything decoupled: every shortcut between modules looks harmless at the time and costs a lot later.\n\nThe biggest lesson was understanding the reasoning behind the decisions in commercial engines. Today, when I use one of them, I know what's happening underneath and can get much more out of it."
       }
+    },
+    "media": {
+      "videos": [
+        {
+          "src": "/videos/projects/byteforge/editor-tour.mp4",
+          "poster": "/images/projects/byteforge/editor-tour-poster.webp",
+          "width": 1920,
+          "height": 1008,
+          "caption": {
+            "pt": "Tour pelo editor: seleção, gizmo, editor de código, Play, profiler e painéis do ECS.",
+            "en": "Editor tour: selection, gizmo, code editor, Play, profiler and ECS panels."
+          }
+        },
+        {
+          "src": "/videos/projects/byteforge/forge-breakout-gameplay.mp4",
+          "poster": "/images/projects/byteforge/forge-breakout-gameplay-poster.webp",
+          "width": 1280,
+          "height": 720,
+          "caption": {
+            "pt": "Forge Breakout rodando fora do editor.",
+            "en": "Forge Breakout running outside the editor."
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/images/projects/byteforge/editor-play-mode.webp",
+          "width": 1600,
+          "height": 841,
+          "caption": {
+            "pt": "Editor em modo Play",
+            "en": "Editor in Play mode"
+          }
+        },
+        {
+          "src": "/images/projects/byteforge/viewport-gizmo.webp",
+          "width": 1600,
+          "height": 841,
+          "caption": {
+            "pt": "Gizmo do viewport",
+            "en": "Viewport gizmo"
+          }
+        },
+        {
+          "src": "/images/projects/byteforge/code-editor.webp",
+          "width": 1600,
+          "height": 841,
+          "caption": {
+            "pt": "Editor de código integrado",
+            "en": "Built-in code editor"
+          }
+        },
+        {
+          "src": "/images/projects/byteforge/forge-breakout.webp",
+          "width": 1280,
+          "height": 720,
+          "caption": {
+            "pt": "Forge Breakout, o jogo de demonstração",
+            "en": "Forge Breakout, the demo game"
+          }
+        },
+        {
+          "src": "/images/projects/byteforge/ecs-profiler.webp",
+          "width": 1600,
+          "height": 841,
+          "caption": {
+            "pt": "Observador do ECS e profiler",
+            "en": "ECS observer and profiler"
+          }
+        },
+        {
+          "src": "/images/projects/byteforge/forge-breakout-score.webp",
+          "width": 1280,
+          "height": 720,
+          "caption": {
+            "pt": "Forge Breakout em andamento",
+            "en": "Forge Breakout in progress"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "slug": "project-00-chef",
+    "title": {
+      "pt": "Project 00 Chef",
+      "en": "Project 00 Chef"
+    },
+    "summary": {
+      "pt": "Um jogo 3D de cozinha.",
+      "en": "A 3D cooking game."
+    },
+    "categories": [
+      "games",
+      "programming"
+    ],
+    "year": "2025",
+    "cover": {
+      "src": "/images/projects/project-00-chef/cover.webp",
+      "width": 1407,
+      "height": 892
+    },
+    "featured": true,
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/pietrodeluca1997/project-00-chef",
+        "icon": "/icons/social/github.svg"
+      }
+    ],
+    "technologies": [
+      "Godot 4",
+      "C#"
+    ],
+    "details": {
+      "about": {
+        "pt": "Um jogo 3D de cozinha feito na Godot 4 com C#. A premissa do projeto foi conhecer a Godot e testar as capacidades 3D dela na prática.\n\nAlgumas mecânicas que já estão no jogo:\n\n- Atendimento: o cliente chega, é recebido no balcão e faz o pedido.\n- Ingredientes: um fornecedor passa de tempos em tempos para vender produtos frescos.\n- Preparo: lavar, cortar, montar o prato e entregar o pedido.\n- Configurações gráficas: ajustes aplicados em tempo real, com presets de qualidade.",
+        "en": "A 3D cooking game made in Godot 4 with C#. The premise of the project was to get to know Godot and test its 3D capabilities in practice.\n\nSome of the mechanics already in the game:\n\n- Customer service: the customer arrives, is greeted at the counter and places an order.\n- Ingredients: a vendor stops by every now and then to sell fresh produce.\n- Cooking: washing, chopping, plating and delivering the order.\n- Graphics settings: changes applied in real time, with quality presets."
+      }
+    },
+    "media": {
+      "videos": [
+        {
+          "src": "/videos/projects/project-00-chef/customer-service.mp4",
+          "poster": "/images/projects/project-00-chef/customer-service-poster.webp",
+          "width": 800,
+          "height": 450,
+          "caption": {
+            "pt": "Atendimento: o cliente chega, é recebido no balcão e faz o pedido.",
+            "en": "Customer service: the customer arrives, is greeted at the counter and places an order."
+          }
+        },
+        {
+          "src": "/videos/projects/project-00-chef/cooking.mp4",
+          "poster": "/images/projects/project-00-chef/cooking-poster.webp",
+          "width": 800,
+          "height": 450,
+          "caption": {
+            "pt": "Ingredientes e preparo: compra com o fornecedor, lavagem, corte, montagem do prato e entrega.",
+            "en": "Ingredients and cooking: buying from the vendor, washing, chopping, plating and delivery."
+          }
+        },
+        {
+          "src": "/videos/projects/project-00-chef/graphics-settings.mp4",
+          "poster": "/images/projects/project-00-chef/graphics-settings-poster.webp",
+          "width": 800,
+          "height": 450,
+          "caption": {
+            "pt": "Configurações gráficas aplicadas em tempo real.",
+            "en": "Graphics settings applied in real time."
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/images/projects/project-00-chef/kitchen-chef.webp",
+          "width": 1600,
+          "height": 900,
+          "caption": {
+            "pt": "O chef na cozinha",
+            "en": "The chef in the kitchen"
+          }
+        },
+        {
+          "src": "/images/projects/project-00-chef/dining-hall.webp",
+          "width": 1600,
+          "height": 900,
+          "caption": {
+            "pt": "Salão",
+            "en": "Dining hall"
+          }
+        },
+        {
+          "src": "/images/projects/project-00-chef/dining-hall-customer.webp",
+          "width": 1600,
+          "height": 900,
+          "caption": {
+            "pt": "Cliente no salão",
+            "en": "Customer in the dining hall"
+          }
+        },
+        {
+          "src": "/images/projects/project-00-chef/street.webp",
+          "width": 1600,
+          "height": 900,
+          "caption": {
+            "pt": "Rua",
+            "en": "Street"
+          }
+        },
+        {
+          "src": "/images/projects/project-00-chef/entrance-gate.webp",
+          "width": 1600,
+          "height": 900,
+          "caption": {
+            "pt": "Portão de entrada",
+            "en": "Entrance gate"
+          }
+        },
+        {
+          "src": "/images/projects/project-00-chef/corridor-daylight.webp",
+          "width": 1600,
+          "height": 900,
+          "caption": {
+            "pt": "Corredor à luz do dia",
+            "en": "Corridor in daylight"
+          }
+        }
+      ]
     }
   }
 ]

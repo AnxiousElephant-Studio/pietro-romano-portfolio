@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import { Locale, localizedPath } from "@/core/i18n/config";
 import Icon from "@/core/components/Icon";
-import { formatMessage, Messages } from "@/core/i18n/messages";
+import RichText from "@/core/components/RichText";
+import type { Messages } from "@/core/i18n/messages";
 import StudioMark from "@/core/components/studio/StudioMark";
-import { placeholderImageUrl } from "@/core/lib/placeholderImage";
-import { getCategoryLabel, PROJECT_COVER_SIZE } from "../projects";
+import { getCategoryLabel } from "../projects";
 import type { Project } from "../types";
+import ProjectGallery from "./ProjectGallery";
 
 type ProjectDetailProps = {
   project: Project;
@@ -14,10 +16,9 @@ type ProjectDetailProps = {
   projectMessages: Messages["projects"];
 };
 
-const GALLERY_IMAGE_NUMBERS = [1, 2, 3];
-const GALLERY_IMAGE_SIZE = { width: 800, height: 450 };
-
 export default function ProjectDetail({ project, locale, projectMessages }: ProjectDetailProps) {
+  const { details } = project;
+
   return (
     <article className="section container project">
       <Link href={localizedPath(locale, "/projects")} className="more">
@@ -51,17 +52,62 @@ export default function ProjectDetail({ project, locale, projectMessages }: Proj
       </header>
 
       <div className="project-cover">
-        <Image src={project.cover} alt="" width={PROJECT_COVER_SIZE.width} height={PROJECT_COVER_SIZE.height} priority />
+        <Image
+          src={project.cover.src}
+          alt=""
+          width={project.cover.width}
+          height={project.cover.height}
+          priority
+        />
       </div>
 
       <div className="project-body">
         <div className="prose">
           <h2>{projectMessages.aboutHeading}</h2>
-          <p>{project.details.about[locale]}</p>
-          <h2>{projectMessages.roleHeading}</h2>
-          <p>{project.details.role[locale]}</p>
-          <h2>{projectMessages.challengesHeading}</h2>
-          <p>{project.details.challenges[locale]}</p>
+          <RichText text={details.about[locale]} />
+          {details.modules && (
+            <>
+              <h2>{projectMessages.modulesHeading}</h2>
+              <div className="project-modules">
+                {details.modules.map((projectModule) => (
+                  <section key={projectModule.name.en} className="project-module">
+                    <h3>{projectModule.name[locale]}</h3>
+                    <RichText text={projectModule.description[locale]} />
+                    {projectModule.parts && (
+                      <dl className="project-module-parts">
+                        {projectModule.parts.map((part) => (
+                          <Fragment key={part.name.en}>
+                            <dt>{part.name[locale]}</dt>
+                            <dd>
+                              <RichText text={part.description[locale]} />
+                            </dd>
+                          </Fragment>
+                        ))}
+                      </dl>
+                    )}
+                  </section>
+                ))}
+              </div>
+            </>
+          )}
+          {details.sections?.map((section) => (
+            <Fragment key={section.heading.en}>
+              <h2>{section.heading[locale]}</h2>
+              <RichText text={section.text[locale]} />
+            </Fragment>
+          ))}
+          {details.role && (
+            <>
+              <h2>{projectMessages.roleHeading}</h2>
+              <RichText text={details.role[locale]} />
+            </>
+          )}
+          {details.challenges && (
+            <>
+              <h2>{projectMessages.challengesHeading}</h2>
+              <RichText text={details.challenges[locale]} />
+            </>
+          )}
         </div>
         <aside className="project-aside">
           <h3>{projectMessages.technologiesHeading}</h3>
@@ -81,20 +127,18 @@ export default function ProjectDetail({ project, locale, projectMessages }: Proj
         </aside>
       </div>
 
-      <div className="gallery">
-        {GALLERY_IMAGE_NUMBERS.map((imageNumber) => (
-          <Image
-            key={imageNumber}
-            src={placeholderImageUrl({
-              text: formatMessage(projectMessages.galleryImageLabel, { number: imageNumber }),
-              ...GALLERY_IMAGE_SIZE,
-            })}
-            alt=""
-            width={GALLERY_IMAGE_SIZE.width}
-            height={GALLERY_IMAGE_SIZE.height}
-          />
-        ))}
-      </div>
+      {project.media && (
+        <ProjectGallery
+          media={project.media}
+          locale={locale}
+          labels={{
+            heading: projectMessages.galleryHeading,
+            close: projectMessages.galleryClose,
+            previous: projectMessages.galleryPrevious,
+            next: projectMessages.galleryNext,
+          }}
+        />
+      )}
     </article>
   );
 }

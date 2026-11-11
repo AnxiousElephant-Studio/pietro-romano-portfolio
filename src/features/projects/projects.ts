@@ -3,8 +3,6 @@ import categoriesData from "./data/categories.json";
 import projectsData from "./data/projects.json";
 import type { Category, Project } from "./types";
 
-export const PROJECT_COVER_SIZE = { width: 1200, height: 675 };
-
 export const categories: Category[] = categoriesData;
 export const projects: Project[] = projectsData;
 
